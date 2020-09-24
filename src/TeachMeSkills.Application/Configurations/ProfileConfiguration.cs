@@ -58,7 +58,8 @@ namespace TeachMeSkills.Application.Configurations
 
             builder.HasOne(p => p.User)
                 .WithOne(i => i.Profile)
-                .HasForeignKey<Profile>(p => p.UserId);
+                .HasForeignKey<Profile>(p => p.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

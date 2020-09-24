@@ -9,5 +9,10 @@
         /// Account.
         /// </summary>
         public const string Account = "account";
+
+        /// <summary>
+        /// Course.
+        /// </summary>
+        public const string Course = "course";
     }
 }

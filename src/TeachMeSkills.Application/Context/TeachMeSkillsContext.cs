@@ -23,11 +23,29 @@ namespace TeachMeSkills.Application.Context
         /// </summary>
         public DbSet<Profile> Profiles { get; set; }
 
+        /// <summary>
+        /// Courses.
+        /// </summary>
+        public DbSet<Course> Courses { get; set; }
+
+        /// <summary>
+        /// Materials.
+        /// </summary>
+        public DbSet<Material> Materials { get; set; }
+
+        /// <summary>
+        /// Course materials.
+        /// </summary>
+        public DbSet<CourseMaterial> CourseMaterials { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder = modelBuilder ?? throw new ArgumentNullException(nameof(modelBuilder));
 
             modelBuilder.ApplyConfiguration(new ProfileConfiguration());
+            modelBuilder.ApplyConfiguration(new CourseConfiguration());
+            modelBuilder.ApplyConfiguration(new MaterialConfiguration());
+            modelBuilder.ApplyConfiguration(new CourseMaterialConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }

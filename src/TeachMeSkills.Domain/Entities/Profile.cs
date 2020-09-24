@@ -77,6 +77,6 @@ namespace TeachMeSkills.Domain.Entities
         /// <summary>
         /// Last edited.
         /// </summary>
-        public DateTime LastEdited { get; set; }
+        public DateTime? LastEdited { get; set; }
     }
 }
