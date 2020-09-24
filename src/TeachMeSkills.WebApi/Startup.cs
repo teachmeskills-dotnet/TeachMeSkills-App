@@ -1,24 +1,39 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+using TeachMeSkills.Application.Extensions;
 
 namespace TeachMeSkills.WebApi
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
+        public IConfiguration Configuration { get; }
+
+        public Startup(IConfiguration configuration)
         {
+            Configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddApplication(Configuration);
+
+            //services.AddIdentity<IdentityUser, IdentityRole>(config =>
+            //{
+            //    config.Password.RequiredLength = 4;
+            //    config.Password.RequireDigit = false;
+            //    config.Password.RequireNonAlphanumeric = false;
+            //    config.Password.RequireUppercase = false;
+            //    config.SignIn.RequireConfirmedEmail = true;
+            //})
+            //.AddEntityFrameworkStores<TeachMeSkillsContext>()
+            //.AddDefaultTokenProviders();
+        }
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
