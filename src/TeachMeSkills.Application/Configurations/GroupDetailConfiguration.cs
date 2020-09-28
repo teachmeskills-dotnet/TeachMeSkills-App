@@ -36,7 +36,7 @@ namespace TeachMeSkills.Application.Configurations
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
             builder.Property(groupDetail => groupDetail.Comment)
-                .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthLong);
 
             builder.HasOne(groupDetail => groupDetail.Group)
                 .WithMany(group => group.GroupDetails)

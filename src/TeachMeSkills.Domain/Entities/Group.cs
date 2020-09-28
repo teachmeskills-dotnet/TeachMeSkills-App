@@ -7,7 +7,7 @@ namespace TeachMeSkills.Domain.Entities
     /// <summary>
     /// Group.
     /// </summary>
-    public class Group : IHasDbIdentity
+    public class Group : IHasDbIdentity, IHasComment
     {
         /// <inheritdoc/>
         public int Id { get; set; }
@@ -18,7 +18,7 @@ namespace TeachMeSkills.Domain.Entities
         public int CourseId { get; set; }
 
         /// <summary>
-        /// Navigation to course.
+        /// Navigation to Course.
         /// </summary>
         public Course Course { get; set; }
 
@@ -26,11 +26,6 @@ namespace TeachMeSkills.Domain.Entities
         /// Serial.
         /// </summary>
         public string Serial { get; set; }
-
-        /// <summary>
-        /// Comment.
-        /// </summary>
-        public string Comment { get; set; }
 
         /// <summary>
         /// Start.
@@ -41,6 +36,9 @@ namespace TeachMeSkills.Domain.Entities
         /// End.
         /// </summary>
         public DateTime? End { get; set; }
+
+        /// <inheritdoc/>
+        public string Comment { get; set; }
 
         /// <summary>
         /// Navigation to GroupDetails.

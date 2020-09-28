@@ -6,7 +6,7 @@ namespace TeachMeSkills.Domain.Entities
     /// <summary>
     /// Exercise.
     /// </summary>
-    public class Exercise : IHasDbIdentity
+    public class Exercise : IHasDbIdentity, IHasComment
     {
         /// <inheritdoc/>
         public int Id { get; set; }
@@ -21,9 +21,7 @@ namespace TeachMeSkills.Domain.Entities
         /// </summary>
         public string Link { get; set; }
 
-        /// <summary>
-        /// Comment.
-        /// </summary>
+        /// <inheritdoc/>
         public string Comment { get; set; }
 
         /// <summary>

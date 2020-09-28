@@ -23,14 +23,14 @@ namespace TeachMeSkills.Application.Configurations
                 .IsRequired()
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthLong);
 
-            builder.Property(group => group.Comment)
-                .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
-
             builder.Property(group => group.Start)
                 .HasColumnType(ConfigurationContants.SqlDateFormat);
 
             builder.Property(group => group.End)
                 .HasColumnType(ConfigurationContants.SqlDateFormat);
+
+            builder.Property(group => group.Comment)
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthLong);
 
             builder.HasOne(group => group.Course)
                 .WithMany(course => course.Groups)

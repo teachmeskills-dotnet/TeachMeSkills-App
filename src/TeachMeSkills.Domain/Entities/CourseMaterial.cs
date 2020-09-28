@@ -17,7 +17,7 @@ namespace TeachMeSkills.Domain.Entities
         public int CourseId { get; set; }
 
         /// <summary>
-        /// Navigation to course.
+        /// Navigation to Course.
         /// </summary>
         public Course Course { get; set; }
 
@@ -27,7 +27,7 @@ namespace TeachMeSkills.Domain.Entities
         public int MaterialId { get; set; }
 
         /// <summary>
-        /// Navigation to course.
+        /// Navigation to Material.
         /// </summary>
         public Material Material { get; set; }
 

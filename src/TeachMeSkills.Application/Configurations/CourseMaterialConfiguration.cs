@@ -18,6 +18,16 @@ namespace TeachMeSkills.Application.Configurations
 
             builder.ToTable(TableConstants.CourseMaterials, SchemaConstants.Course)
                 .HasKey(courseMaterial => courseMaterial.Id);
+
+            builder.HasOne(courseMaterial => courseMaterial.Material)
+                .WithMany(material => material.CourseMaterials)
+                .HasForeignKey(courseMaterial => courseMaterial.MaterialId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(courseMaterial => courseMaterial.Course)
+                .WithMany(course => course.CourseMaterials)
+                .HasForeignKey(courseMaterial => courseMaterial.CourseId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

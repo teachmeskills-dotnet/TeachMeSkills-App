@@ -6,7 +6,7 @@ namespace TeachMeSkills.Domain.Entities
     /// <summary>
     /// Office.
     /// </summary>
-    public class Office : IHasDbIdentity
+    public class Office : IHasDbIdentity, IHasComment
     {
         /// <inheritdoc/>
         public int Id { get; set; }
@@ -31,9 +31,7 @@ namespace TeachMeSkills.Domain.Entities
         /// </summary>
         public string Phone { get; set; }
 
-        /// <summary>
-        /// Comment.
-        /// </summary>
+        /// <inheritdoc/>
         public string Comment { get; set; }
 
         /// <summary>

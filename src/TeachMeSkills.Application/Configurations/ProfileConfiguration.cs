@@ -17,48 +17,48 @@ namespace TeachMeSkills.Application.Configurations
             builder = builder ?? throw new ArgumentNullException(nameof(builder));
 
             builder.ToTable(TableConstants.Profiles, SchemaConstants.Account)
-                .HasKey(p => p.Id);
+                .HasKey(profile => profile.Id);
 
-            builder.Property(p => p.FirstName)
+            builder.Property(profile => profile.FirstName)
                 .IsRequired()
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
-            builder.Property(p => p.LastName)
+            builder.Property(profile => profile.LastName)
                 .IsRequired()
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
-            builder.Property(p => p.MiddleName)
+            builder.Property(profile => profile.MiddleName)
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
-            builder.Property(p => p.BirthDate)
+            builder.Property(profile => profile.BirthDate)
                 .HasColumnType(ConfigurationContants.SqlDateFormat);
 
-            builder.Property(p => p.Phone)
+            builder.Property(profile => profile.Phone)
                 .IsRequired()
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
-            builder.Property(p => p.Phone)
+            builder.Property(profile => profile.Phone)
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
-            builder.Property(p => p.Telegram)
+            builder.Property(profile => profile.Telegram)
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
-            builder.Property(p => p.Telegram)
+            builder.Property(profile => profile.Telegram)
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
-            builder.Property(p => p.SocialNetwork)
+            builder.Property(profile => profile.SocialNetwork)
                 .IsRequired()
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthLong);
 
-            builder.Property(p => p.ChatId)
+            builder.Property(profile => profile.ChatId)
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthLong);
 
-            builder.Property(p => p.SecretKey)
+            builder.Property(profile => profile.SecretKey)
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthLong);
 
-            builder.HasOne(p => p.User)
-                .WithOne(i => i.Profile)
-                .HasForeignKey<Profile>(p => p.UserId)
+            builder.HasOne(profile => profile.User)
+                .WithOne(user => user.Profile)
+                .HasForeignKey<Profile>(profile => profile.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

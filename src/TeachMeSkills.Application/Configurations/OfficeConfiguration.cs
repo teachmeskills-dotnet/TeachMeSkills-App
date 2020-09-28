@@ -35,7 +35,7 @@ namespace TeachMeSkills.Application.Configurations
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthShort);
 
             builder.Property(office => office.Comment)
-                .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium); // TODO: change to long 
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthLong);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace TeachMeSkills.Domain.Entities
     /// <summary>
     /// Statistic.
     /// </summary>
-    public class Statistic : IHasDbIdentity, IHasUserIdentity
+    public class Statistic : IHasDbIdentity, IHasUserIdentity, IHasComment
     {
         /// <inheritdoc/>
         public int Id { get; set; }
@@ -15,7 +15,7 @@ namespace TeachMeSkills.Domain.Entities
         public string UserId { get; set; }
 
         /// <summary>
-        /// Navigation to application user.
+        /// Navigation to ApplicationUser.
         /// </summary>
         public ApplicationUser User { get; set; }
 
@@ -29,9 +29,7 @@ namespace TeachMeSkills.Domain.Entities
         /// </summary>
         public bool IsVisted { get; set; }
 
-        /// <summary>
-        /// Comment.
-        /// </summary>
+        /// <inheritdoc/>
         public string Comment { get; set; }
 
         /// <summary>

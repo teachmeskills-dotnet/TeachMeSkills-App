@@ -24,7 +24,7 @@ namespace TeachMeSkills.Domain.Entities
         public string UserId { get; set; }
 
         /// <summary>
-        /// Navigation to application user.
+        /// Navigation to ApplicationUser.
         /// </summary>
         public ApplicationUser User { get; set; }
 

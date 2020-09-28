@@ -24,11 +24,7 @@ namespace TeachMeSkills.Application.Configurations
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
             builder.Property(course => course.Comment)
-                .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
-
-            builder.HasMany(course => course.CourseMaterials)
-                .WithOne(courseMaterial => courseMaterial.Course)
-                .HasForeignKey(courseMaterial => courseMaterial.CourseId);
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthLong);
         }
     }
 }

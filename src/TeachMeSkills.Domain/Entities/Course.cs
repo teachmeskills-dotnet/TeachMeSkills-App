@@ -6,7 +6,7 @@ namespace TeachMeSkills.Domain.Entities
     /// <summary>
     /// Course.
     /// </summary>
-    public class Course : IHasDbIdentity
+    public class Course : IHasDbIdentity, IHasComment
     {
         /// <inheritdoc/>
         public int Id { get; set; }
@@ -16,9 +16,7 @@ namespace TeachMeSkills.Domain.Entities
         /// </summary>
         public string Name { get; set; }
 
-        /// <summary>
-        /// Comment.
-        /// </summary>
+        /// <inheritdoc/>
         public string Comment { get; set; }
 
         /// <summary>

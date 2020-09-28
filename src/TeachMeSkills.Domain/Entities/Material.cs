@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using TeachMeSkills.Common.Interfaces;
 
@@ -8,7 +7,7 @@ namespace TeachMeSkills.Domain.Entities
     /// <summary>
     /// Material.
     /// </summary>
-    public class Material : IHasDbIdentity
+    public class Material : IHasDbIdentity, IHasComment
     {
         /// <inheritdoc/>
         public int Id { get; set; }
@@ -17,11 +16,6 @@ namespace TeachMeSkills.Domain.Entities
         /// Topic.
         /// </summary>
         public string Topic { get; set; }
-
-        /// <summary>
-        /// Comment.
-        /// </summary>
-        public string Comment { get; set; }
 
         /// <summary>
         /// Is actual.
@@ -38,8 +32,11 @@ namespace TeachMeSkills.Domain.Entities
         /// </summary>
         public DateTime? LastEdited { get; set; }
 
+        /// <inheritdoc/>
+        public string Comment { get; set; }
+
         /// <summary>
-        /// Navigation to CourseMaterial.
+        /// Navigation to CourseMaterials.
         /// </summary>
         public ICollection<CourseMaterial> CourseMaterials { get; set; }
     }
