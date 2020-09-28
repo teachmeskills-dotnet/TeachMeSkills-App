@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System.Collections.Generic;
 
 namespace TeachMeSkills.Domain.Entities
 {
@@ -11,5 +12,10 @@ namespace TeachMeSkills.Domain.Entities
         /// Navigation to Profile.
         /// </summary>
         public Profile Profile { get; set; }
+
+        /// <summary>
+        /// Navigation to GroupDetails.
+        /// </summary>
+        public ICollection<GroupDetail> GroupDetails { get; set; }
     }
 }

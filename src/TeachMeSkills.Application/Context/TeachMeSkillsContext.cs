@@ -38,6 +38,16 @@ namespace TeachMeSkills.Application.Context
         /// </summary>
         public DbSet<CourseMaterial> CourseMaterials { get; set; }
 
+        /// <summary>
+        /// Groups.
+        /// </summary>
+        public DbSet<Group> Groups { get; set; }
+
+        /// <summary>
+        /// Group details.
+        /// </summary>
+        public DbSet<GroupDetail> GroupDetails { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder = modelBuilder ?? throw new ArgumentNullException(nameof(modelBuilder));
@@ -46,6 +56,8 @@ namespace TeachMeSkills.Application.Context
             modelBuilder.ApplyConfiguration(new CourseConfiguration());
             modelBuilder.ApplyConfiguration(new MaterialConfiguration());
             modelBuilder.ApplyConfiguration(new CourseMaterialConfiguration());
+            modelBuilder.ApplyConfiguration(new GroupConfiguration());
+            modelBuilder.ApplyConfiguration(new GroupDetailConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }

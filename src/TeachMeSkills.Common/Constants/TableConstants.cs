@@ -24,5 +24,15 @@
         /// Course materials.
         /// </summary>
         public const string CourseMaterials = nameof(CourseMaterials);
+
+        /// <summary>
+        /// Groups.
+        /// </summary>
+        public const string Groups = nameof(Groups);
+
+        /// <summary>
+        /// Group details.
+        /// </summary>
+        public const string GroupDetails = nameof(GroupDetails);
     }
 }

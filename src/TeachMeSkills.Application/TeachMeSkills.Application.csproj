@@ -7,6 +7,12 @@
   <ItemGroup>
     <Compile Remove="Migrations\20200924173545_AddProfileTable.cs" />
     <Compile Remove="Migrations\20200924173545_AddProfileTable.Designer.cs" />
+    <Compile Remove="Migrations\20200928170737_AddGroupSchema.cs" />
+    <Compile Remove="Migrations\20200928170737_AddGroupSchema.Designer.cs" />
+    <Compile Remove="Migrations\20200928171040_AddGroupSchema.cs" />
+    <Compile Remove="Migrations\20200928171040_AddGroupSchema.Designer.cs" />
+    <Compile Remove="Migrations\20200928171453_AddGroupSchema.cs" />
+    <Compile Remove="Migrations\20200928171453_AddGroupSchema.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

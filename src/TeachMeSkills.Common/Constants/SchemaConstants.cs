@@ -14,5 +14,10 @@
         /// Course.
         /// </summary>
         public const string Course = "course";
+
+        /// <summary>
+        /// Group.
+        /// </summary>
+        public const string Group = "group";
     }
 }

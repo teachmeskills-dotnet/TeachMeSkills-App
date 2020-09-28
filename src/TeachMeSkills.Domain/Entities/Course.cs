@@ -22,8 +22,13 @@ namespace TeachMeSkills.Domain.Entities
         public string Comment { get; set; }
 
         /// <summary>
-        /// Navigation to CourseMaterial.
+        /// Navigation to CourseMaterials.
         /// </summary>
         public ICollection<CourseMaterial> CourseMaterials { get; set; }
+
+        /// <summary>
+        /// Navigation to Groups.
+        /// </summary>
+        public ICollection<Group> Groups { get; set; }
     }
 }
