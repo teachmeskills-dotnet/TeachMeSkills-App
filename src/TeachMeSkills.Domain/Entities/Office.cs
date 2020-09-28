@@ -4,32 +4,37 @@ using TeachMeSkills.Common.Interfaces;
 namespace TeachMeSkills.Domain.Entities
 {
     /// <summary>
-    /// Course material.
+    /// Office.
     /// </summary>
-    public class CourseMaterial : IHasDbIdentity
+    public class Office : IHasDbIdentity
     {
         /// <inheritdoc/>
         public int Id { get; set; }
 
         /// <summary>
-        /// Course identifier.
+        /// Location.
         /// </summary>
-        public int CourseId { get; set; }
+        public string Location { get; set; }
 
         /// <summary>
-        /// Navigation to course.
+        /// Room.
         /// </summary>
-        public Course Course { get; set; }
+        public string Room { get; set; }
 
         /// <summary>
-        /// Material identifier.
+        /// Floor.
         /// </summary>
-        public int MaterialId { get; set; }
+        public string Floor { get; set; }
 
         /// <summary>
-        /// Navigation to course.
+        /// Phone.
         /// </summary>
-        public Material Material { get; set; }
+        public string Phone { get; set; }
+
+        /// <summary>
+        /// Comment.
+        /// </summary>
+        public string Comment { get; set; }
 
         /// <summary>
         /// Navigation to Lessons.

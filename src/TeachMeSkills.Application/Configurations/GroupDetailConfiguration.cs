@@ -19,12 +19,12 @@ namespace TeachMeSkills.Application.Configurations
             builder.ToTable(TableConstants.GroupDetails, SchemaConstants.Group)
                 .HasKey(groupDetail => groupDetail.Id);
 
+            builder.Property(groupDetail => groupDetail.UserId)
+                .IsRequired();
+
             builder.Property(groupDetail => groupDetail.Contract)
                 .IsRequired()
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
-
-            builder.Property(groupDetail => groupDetail.UserId)
-                .IsRequired();
 
             builder.Property(groupDetail => groupDetail.Start)
                 .HasColumnType(ConfigurationContants.SqlDateFormat);

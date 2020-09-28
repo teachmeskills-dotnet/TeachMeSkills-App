@@ -19,5 +19,10 @@
         /// Group.
         /// </summary>
         public const string Group = "group";
+
+        /// <summary>
+        /// Lesson.
+        /// </summary>
+        public const string Lesson = "lesson";
     }
 }

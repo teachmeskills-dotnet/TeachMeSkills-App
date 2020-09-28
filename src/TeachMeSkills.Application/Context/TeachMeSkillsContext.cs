@@ -48,6 +48,36 @@ namespace TeachMeSkills.Application.Context
         /// </summary>
         public DbSet<GroupDetail> GroupDetails { get; set; }
 
+        /// <summary>
+        /// Offices.
+        /// </summary>
+        public DbSet<Office> Offices { get; set; }
+
+        /// <summary>
+        /// Exercises.
+        /// </summary>
+        public DbSet<Exercise> Exercises { get; set; }
+
+        /// <summary>
+        /// Statistics.
+        /// </summary>
+        public DbSet<Statistic> Statistics { get; set; }
+
+        /// <summary>
+        /// Lessons.
+        /// </summary>
+        public DbSet<Lesson> Lessons { get; set; }
+
+        /// <summary>
+        /// Lesson statistics.
+        /// </summary>
+        public DbSet<LessonStatistic> LessonStatistics { get; set; }
+
+        /// <summary>
+        /// Homeworks.
+        /// </summary>
+        public DbSet<Homework> Homeworks { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder = modelBuilder ?? throw new ArgumentNullException(nameof(modelBuilder));
@@ -58,6 +88,12 @@ namespace TeachMeSkills.Application.Context
             modelBuilder.ApplyConfiguration(new CourseMaterialConfiguration());
             modelBuilder.ApplyConfiguration(new GroupConfiguration());
             modelBuilder.ApplyConfiguration(new GroupDetailConfiguration());
+            modelBuilder.ApplyConfiguration(new OfficeConfiguration());
+            modelBuilder.ApplyConfiguration(new ExerciseConfiguration());
+            modelBuilder.ApplyConfiguration(new StatisticConfiguration());
+            modelBuilder.ApplyConfiguration(new LessonConfiguration());
+            modelBuilder.ApplyConfiguration(new LessonStatisticConfiguration());
+            modelBuilder.ApplyConfiguration(new HomeworkConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }

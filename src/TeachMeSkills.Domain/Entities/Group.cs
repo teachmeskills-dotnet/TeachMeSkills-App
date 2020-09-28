@@ -46,5 +46,10 @@ namespace TeachMeSkills.Domain.Entities
         /// Navigation to GroupDetails.
         /// </summary>
         public ICollection<GroupDetail> GroupDetails { get; set; }
+
+        /// <summary>
+        /// Navigation to Lessons.
+        /// </summary>
+        public ICollection<Lesson> Lessons { get; set; }
     }
 }
