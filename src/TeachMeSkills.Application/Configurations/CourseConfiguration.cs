@@ -21,10 +21,10 @@ namespace TeachMeSkills.Application.Configurations
 
             builder.Property(course => course.Name)
                 .IsRequired()
-                .HasMaxLength(ConfigurationContants.StandartLenghtForStringField);
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
             builder.Property(course => course.Comment)
-                .HasMaxLength(ConfigurationContants.StandartLenghtForStringField);
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
             builder.HasMany(course => course.CourseMaterials)
                 .WithOne(courseMaterial => courseMaterial.Course)

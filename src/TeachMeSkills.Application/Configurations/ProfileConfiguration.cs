@@ -21,40 +21,40 @@ namespace TeachMeSkills.Application.Configurations
 
             builder.Property(p => p.FirstName)
                 .IsRequired()
-                .HasMaxLength(ConfigurationContants.StandartLenghtForStringField);
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
             builder.Property(p => p.LastName)
                 .IsRequired()
-                .HasMaxLength(ConfigurationContants.StandartLenghtForStringField);
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
             builder.Property(p => p.MiddleName)
-                .HasMaxLength(ConfigurationContants.StandartLenghtForStringField);
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
             builder.Property(p => p.BirthDate)
-                .HasColumnType(ConfigurationContants.DateFormat);
+                .HasColumnType(ConfigurationContants.SqlDateFormat);
 
             builder.Property(p => p.Phone)
                 .IsRequired()
-                .HasMaxLength(ConfigurationContants.StandartLenghtForStringField);
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
             builder.Property(p => p.Phone)
-                .HasMaxLength(ConfigurationContants.StandartLenghtForStringField);
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
             builder.Property(p => p.Telegram)
-                .HasMaxLength(ConfigurationContants.StandartLenghtForStringField);
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
             builder.Property(p => p.Telegram)
-                .HasMaxLength(ConfigurationContants.StandartLenghtForStringField);
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
 
             builder.Property(p => p.SocialNetwork)
                 .IsRequired()
-                .HasMaxLength(ConfigurationContants.MaxLenghtForStringField);
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthLong);
 
             builder.Property(p => p.ChatId)
-                .HasMaxLength(ConfigurationContants.MaxLenghtForStringField);
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthLong);
 
             builder.Property(p => p.SecretKey)
-                .HasMaxLength(ConfigurationContants.MaxLenghtForStringField);
+                .HasMaxLength(ConfigurationContants.SqlMaxLengthLong);
 
             builder.HasOne(p => p.User)
                 .WithOne(i => i.Profile)

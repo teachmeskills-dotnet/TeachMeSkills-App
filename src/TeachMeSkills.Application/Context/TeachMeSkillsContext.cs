@@ -9,7 +9,7 @@ namespace TeachMeSkills.Application.Context
     /// <summary>
     /// Database context.
     /// </summary>
-    public class TeachMeSkillsContext : IdentityDbContext
+    public class TeachMeSkillsContext : IdentityDbContext<ApplicationUser>
     {
         /// <summary>
         /// Constructor.

@@ -32,6 +32,10 @@ namespace TeachMeSkills.WebApi
             //})
             //.AddEntityFrameworkStores<TeachMeSkillsContext>()
             //.AddDefaultTokenProviders();
+
+            //services.Configure<PositionOptions>(options => Configuration.GetSection(PositionOptions.Position).Bind(options));
+            //services.Configure<PositionOptions>(Configuration.GetSection(PositionOptions.Position));
+            //services.AddOptions<PositionOptions>().Bind(Configuration.GetSection(PositionOptions.Position));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
