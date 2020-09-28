@@ -19,6 +19,9 @@ namespace TeachMeSkills.Application.Configurations
             builder.ToTable(TableConstants.Profiles, SchemaConstants.Account)
                 .HasKey(profile => profile.Id);
 
+            builder.Property(profile => profile.UserId)
+                .IsRequired();
+
             builder.Property(profile => profile.FirstName)
                 .IsRequired()
                 .HasMaxLength(ConfigurationContants.SqlMaxLengthMedium);
